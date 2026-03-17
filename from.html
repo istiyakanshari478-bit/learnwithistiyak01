@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Certificate Details</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f2f2f2;
+}
+
+.form-box{
+width:400px;
+margin:80px auto;
+background:white;
+padding:80px;
+box-shadow:0 0 10px gray;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+button{
+padding:10px 20px;
+background:green;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="form-box">
+
+<h2>Fill Your Details</h2>
+
+<form action="certificate.html">
+
+<input type="text" name="name" placeholder="Student Name" required>
+
+<input type="text" name="course" placeholder="Course Name" required>
+<input type="text" id="score" name="score">
+
+<input type="text" id="percentage" name="percentage">
+
+<input type="text" id="result" name="result">
+
+<input type="text" name="Father's Name" placeholder="Father's Name" required>
+
+<input type="text" name="Mother's Name" placeholder="Mother's Name" required>
+
+
+<a href="certificate.html"><button type="submit">Generate Certificate</button></a>
+
+</form>
+
+
+</div>
+<script>
+function openForm(name,score,percentage,status){
+
+window.location.href =
+"form.html?name="+name+
+"&score="+score+
+"&percentage="+percentage+
+"&result="+status;
+
+}
+</script>
+<script>
+
+var params = new URLSearchParams(window.location.search);
+
+document.getElementById("score").value = params.get("score");
+document.getElementById("percentage").value = params.get("percentage");
+document.getElementById("result").value = params.get("result");
+
+</script>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<footer style="background:#1e1e1e;color:white;padding:40px;font-family:Arial;">
+
+<div style="text-align:center;border:1px solid gray;padding:15px;margin-bottom:20px;">
+<font size="6" face="Arial black">Learn With Istiyak</font>
+</div>
+
+<div style="text-align:center;border:1px solid gray;padding:15px;margin-bottom:30px;">
+<h3>Follow Us</h3>
+<a href="https://www.facebook.com/share/1KA4x5AkCN/" target="_blank" style="color:black;margin:10px;"><button>Facebook</a></button>
+<a href="https://youtube.com/@istiyak7techz?si=9fHm0SpjtRlPgKcd" target="_blank" style="color:black;margin:10px;"><button>YouTube</a></button>
+<a href="https://www.instagram.com/mr_istiyak_boy?igsh=OXNhdjNpOXVmOWJw" target="_blank" style="color:black;margin:10px;"><button>Instagram</a></button>
+</div>
+
+<div style="display:flex;justify-content:space-around;flex-wrap:wrap;">
+<div>
+
+<h3>Useful Links</h3>
+<p><a href="Aboutus.html" style="color:white;">About Us</a></p>
+<p><a href="Notespdf.html" style="color:white;">Notes PDF</a></p>
+<p><a href="Video.html" style="color:white;">Courses Video</a></p>
+</div>
+<div>
+
+<h3>Important Links</h3>
+<p><a href="privacypolicy.html" style="color:white;">Privacy Policy</a></p>
+<p><a href="Disclaimer.html" style="color:white;">Disclaimer</a></p>
+<p><a href="Contectus.html" style="color:white;">Contect Us</a></p>
+
+</div>
+</div>
+
+<hr style="margin-top:30px;">
+
+<center>
+<p>© 2026 Learn with Istiyak| Free Computer Course</p>
+</center>
+
+</footer>
+</body>
+</html>
