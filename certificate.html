@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+
+<title>Course Certificate</title>
+
+<style>
+
+body{
+background:#f2f2f2;
+font-family:Georgia;
+margin:0;
+}
+
+.page{
+
+width:420mm;
+height:297mm;
+margin:auto;
+background: #FFE6FA;
+border:30px solid #453a94;
+padding:40px;
+box-sizing:border-box;
+
+}
+
+.title{
+text-align:center;
+font-size:42px;
+color:#701B6D;
+}
+
+.subtitle{
+text-align:center;
+font-size:20px;
+margin-top:20px;
+}
+
+.name{
+text-align:center;
+font-size:40px;
+margin:36px 0;
+font-weight:bold;
+}
+
+.info{
+text-align:center;
+font-size:22px;
+margin-top:10px;
+}
+
+.footer{
+display:flex;
+justify-content:space-between;
+margin-top:80px;
+}
+
+.sign{
+text-align:center;
+}
+
+button{
+display:block;
+margin:20px auto;
+padding:10px 20px;
+font-size:18px;
+background:green;
+color:white;
+border:none;
+cursor:pointer;
+}
+img{
+width:25mm;
+height:25mm;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="page" id="certificate">
+ <img src="images/Logos/Logos.png">
+<div class="title">
+<font size="7" face="Arial Black">Learn With Istiyak </font>
+</div>
+
+<div class="subtitle">
+<font Size="5" color="darkred"><I>This certificate is proudly presented to</I></font>
+</div>
+
+<font Size="7" color="darkred"><b><u><div class="name" id="name"></div></b></u></font>
+
+<div class="info">
+<font size="7" face="Britannic bold" color="darkgreen">For successfully completing the course</font>
+</div>
+
+<div class="info">
+<b id="course"></b>
+</div>
+<center>
+<font size="5"><p><b>Score: <span id="score"></span></p></font></b>
+<font size="5"><p><b>Percentage: <span id="percentage"></span></p><font></b>
+<font size="5"><p><b>Result: <span id="result"></span></p><font></b>
+</center>
+<div class="info">
+<font size="6" face="Cooper Black" color="Darkred">Father's Name: <span id="Father's Name"></span></font>
+</div>
+
+<div class="info">
+<font size="6" face="cooper Black" color="Darkred">Mother's Name: <span id="Mother's Name"></span></font>
+</div>
+<br><br><br><br><br>
+<div class="footer">
+
+<div class="sign">
+__________________ <br>
+Instructor
+</div>
+
+<div class="sign">
+_________________ <br>
+Director
+</div>
+
+</div>
+
+</div>
+
+<button onclick="downloadPDF()">Download Certificate</button>
+
+<script>
+
+var params = new URLSearchParams(window.location.search);
+
+document.getElementById("name").innerHTML = params.get("name");
+document.getElementById("course").innerHTML = params.get("course");
+document.getElementById("Father's Name").innerHTML = params.get("Father's Name");
+document.getElementById("Mother's Name").innerHTML = params.get("Mother's Name");
+
+function downloadPDF(){
+window.print();
+}
+var params = new URLSearchParams(window.location.search);
+
+document.getElementById("score").innerHTML = params.get("score");
+document.getElementById("percentage").innerHTML = params.get("percentage");
+document.getElementById("result").innerHTML = params.get("result");
+</script>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<footer style="background:#1e1e1e;color:white;padding:40px;font-family:Arial;">
+
+<div style="text-align:center;border:1px solid gray;padding:15px;margin-bottom:20px;">
+<font size="6" face="Arial black">Learn With Istiyak</font>
+</div>
+
+<div style="text-align:center;border:1px solid gray;padding:15px;margin-bottom:30px;">
+<h3>Follow Us</h3>
+<a href="https://www.facebook.com/share/1KA4x5AkCN/" target="_blank" style="color:black;margin:10px;"><button>Facebook</a></button>
+<a href="https://youtube.com/@istiyak7techz?si=9fHm0SpjtRlPgKcd" target="_blank" style="color:black;margin:10px;"><button>YouTube</a></button>
+<a href="https://www.instagram.com/mr_istiyak_boy?igsh=OXNhdjNpOXVmOWJw" target="_blank" style="color:black;margin:10px;"><button>Instagram</a></button>
+</div>
+
+<div style="display:flex;justify-content:space-around;flex-wrap:wrap;">
+<div>
+
+<h3>Useful Links</h3>
+<p><a href="Aboutus.html" style="color:white;">About Us</a></p>
+<p><a href="Notespdf.html" style="color:white;">Notes PDF</a></p>
+<p><a href="Video.html" style="color:white;">Courses Video</a></p>
+</div>
+<div>
+
+<h3>Important Links</h3>
+<p><a href="privacypolicy.html" style="color:white;">Privacy Policy</a></p>
+<p><a href="Disclaimer.html" style="color:white;">Disclaimer</a></p>
+<p><a href="Contectus.html" style="color:white;">Contect Us</a></p>
+
+</div>
+</div>
+
+<hr style="margin-top:30px;">
+
+<center>
+<p>© 2026 Learn with Istiyak| Free Computer Course</p>
+</center>
+
+</footer>
+
+
+</body>
+</html>

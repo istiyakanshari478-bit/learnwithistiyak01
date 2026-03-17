@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DCA Video Course</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f2f2f2;
+}
+
+.header{
+background:white;
+padding:10px;
+box-shadow:0 0 5px gray;
+}
+
+.container{
+display:flex;
+padding:20px;
+}
+
+/* VIDEO PLAYER */
+
+.player{
+flex:2;
+}
+
+iframe{
+width:100%;
+height:420px;
+border:none;
+border-radius:10px;
+}
+
+/* BUTTONS */
+
+.controls{
+margin-top:10px;
+}
+
+button{
+padding:10px 18px;
+margin-right:10px;
+border:none;
+background:#007bff;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0056b3;
+}
+
+/* PLAYLIST */
+
+.playlist{
+flex:1;
+background:white;
+margin-left:20px;
+padding:10px;
+height:450px;
+overflow-y:auto;
+box-shadow:0 0 5px gray;
+}
+
+.video-item{
+padding:12px;
+border-bottom:1px solid #ddd;
+cursor:pointer;
+}
+
+.video-item:hover{
+background:#e8f2ff;
+}
+
+/* PROGRESS */
+
+.progress-box{
+margin-top:15px;
+}
+
+progress{
+width:100%;
+height:20px;
+}
+
+.exam{
+margin-top:10px;
+background:red;
+}
+
+video{
+width:100%;
+height:420px;
+border:4px solid #007bff;
+border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<h2>Learn with Istiyak - DCA Course</h2>
+</div>
+
+<div class="container">
+
+<div class="player">
+
+<video id="videoPlayer" width="100%" height="420" controls>
+<source src="images/Video/video1.mp4" type="video/mp4">
+</video>
+
+<div class="controls">
+<button onclick="prevVideo()">Previous</button>
+<button onclick="nextVideo()">Next</button>
+</div>
+
+<div class="progress-box">
+<p>Course Progress</p>
+<progress id="progressBar" value="1" max="18"></progress>
+<a href="exam.html"><button class="exam">Start Exam</button></a>
+</div>
+
+</div>
+
+<div class="playlist">
+
+<div class="video-item" onclick="playVideo(0)">
+1. Basic Computer Course Topics Explained
+</div>
+
+<div class="video-item" onclick="playVideo(1)">
+2. What is Computer | Fundamentals of computer
+</div>
+
+<div class="video-item" onclick="playVideo(2)">
+3. Laptop Ko On Off Kaise Karen
+</div>
+
+<div class="video-item" onclick="playVideo(3)">
+4. Input,Output Devices Kya Hai | Computer Basics in Hindi
+</div>
+
+<div class="video-item" onclick="playVideo(4)">
+5. What is Hardware in Computer Explained in Hindi
+</div>
+
+<div class="video-item" onclick="playVideo(5)">
+6. How to Convert Word File into PDF 
+</div>
+
+<div class="video-item" onclick="playVideo(6)">
+7. How to Change Your Mouse Cursor in Windows
+</div>
+
+<div class="video-item" onclick="playVideo(7)">
+8. Desktop Icons Size: Large,Medium,Small kese kare 
+</div>
+
+<div class="video-item" onclick="playVideo(8)">
+9. Phone ka Hotspot Laptop Se kaise Connect kare ?
+</div>
+
+<div class="video-item" onclick="playVideo(9)">
+10. Computer ya Laptop Se PDF file WhatsApp me kese send karte hai ? 
+</div>
+
+<div class="video-item" onclick="playVideo(10)">
+11. Leptop me display par photo kaise lagaye ?
+</div>
+
+<div class="video-item" onclick="playVideo(11)">
+12. How to Create Folder in Computer ?
+</div>
+
+<div class="video-item" onclick="playVideo(12)">
+13. How to Shutdown Windows 11 Laptop 
+</div>
+
+<div class="video-item" onclick="playVideo(13)">
+14. Tally Prime 6.0 How to Create a Company in 2026 Step-by-step Guide
+</div>
+
+<div class="video-item" onclick="playVideo(14)">
+15. How to Create Multiple Companies in Tally Prime ?
+</div>
+
+<div class="video-item" onclick="playVideo(14)">
+15.Company Creation with Password ?
+</div>
+<div class="video-item" onclick="playVideo(15)">
+16. Create,Alter,Change, Select & Shut Company in Tally Prime
+</div>
+
+<div class="video-item" onclick="playVideo(14)">
+17. Tally Prime Password Change Step By Step in Hindi ?
+</div>
+
+
+<div class="video-item" onclick="playVideo(14)">
+18. How to Change Username & Password in Tally Prime ?
+</div>
+
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+var videos = [
+
+"images/Video/video1.mp4",
+"images/Video/video2.mp4",
+"images/Video/video3.mp4",
+"images/Video/video4.mp4",
+"images/Video/video5.mp4",
+"images/Video/video6.mp4",
+"images/Video/video7.mp4",
+"images/Video/video8.mp4",
+"images/Video/video9.mp4",
+"images/Video/video10.mp4",
+"images/Video/video11.mp4",
+"images/Video/video12.mp4",
+"images/Video/video13.mp4",
+"images/Video/video14.mp4",
+"images/Video/video15.mp4",
+"images/Video/video16.mp4",
+"images/Video/video17.mp4",
+"images/Video/video18.mp4"
+
+];
+var currentVideo = 0;
+
+function playVideo(index){
+
+currentVideo = index;
+
+var player = document.getElementById("videoPlayer");
+
+player.src = videos[index];
+
+document.getElementById("progressBar").value = index + 1;
+
+}
+
+function nextVideo(){
+
+if(currentVideo < videos.length - 1){
+
+currentVideo++;
+
+playVideo(currentVideo);
+
+}
+
+}
+
+function prevVideo(){
+
+if(currentVideo > 0){
+
+currentVideo--;
+
+playVideo(currentVideo);
+
+}
+
+}
+
+function nextVideo(){
+
+if(currentVideo < videos.length-1){
+currentVideo++;
+playVideo(currentVideo);
+}
+
+}
+
+function prevVideo(){
+
+if(currentVideo > 0){
+currentVideo--;
+playVideo(currentVideo);
+}
+
+}
+
+</script>
+
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+
+
+
+<footer style="background:#1e1e1e;color:white;padding:40px;font-family:Arial;">
+
+<div style="text-align:center;border:1px solid gray;padding:15px;margin-bottom:20px;">
+<font size="6" face="Arial black">Learn With Istiyak</font>
+</div>
+
+<div style="text-align:center;border:1px solid gray;padding:15px;margin-bottom:30px;">
+<h3>Follow Us</h3>
+<a href="https://www.facebook.com/share/1KA4x5AkCN/" target="_blank" style="color:black;margin:10px;"><button>Facebook</a></button>
+<a href="https://youtube.com/@istiyak7techz?si=9fHm0SpjtRlPgKcd" target="_blank" style="color:black;margin:10px;"><button>YouTube</a></button>
+<a href="https://www.instagram.com/mr_istiyak_boy?igsh=OXNhdjNpOXVmOWJw" target="_blank" style="color:black;margin:10px;"><button>Instagram</a></button>
+</div>
+
+<div style="display:flex;justify-content:space-around;flex-wrap:wrap;">
+<div>
+
+<h3>Useful Links</h3>
+<p><a href="Aboutus.html" style="color:white;">About Us</a></p>
+<p><a href="Notespdf.html" style="color:white;">Notes PDF</a></p>
+<p><a href="Video.html" style="color:white;">Courses Video</a></p>
+</div>
+<div>
+
+<h3>Important Links</h3>
+<p><a href="privacypolicy.html" style="color:white;">Privacy Policy</a></p>
+<p><a href="Disclaimer.html" style="color:white;">Disclaimer</a></p>
+<p><a href="Contectus.html" style="color:white;">Contect Us</a></p>
+
+</div>
+</div>
+
+<hr style="margin-top:30px;">
+
+<center>
+<p>© 2026 Learn with Istiyak| Free Computer Course</p>
+</center>
+
+</footer>
+
+</body>
+</html>

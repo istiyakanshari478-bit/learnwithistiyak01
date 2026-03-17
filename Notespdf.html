@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Course Notes</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f2f2f2;
+margin:0;
+}
+
+h1{
+text-align:center;
+padding:20px;
+background:#0a4fa3;
+color:white;
+}
+
+.container{
+display:flex;
+}
+
+.sidebar{
+width:250px;
+background:white;
+padding:20px;
+box-shadow:0 0 10px gray;
+}
+
+.sidebar button{
+width:100%;
+padding:10px;
+margin-bottom:10px;
+cursor:pointer;
+border:none;
+background:#eee;
+}
+
+.viewer{
+flex:1;
+padding:20px;
+}
+
+iframe{
+width:100%;
+height:500px;
+border:1px solid gray;
+}
+
+.download{
+margin-top:10px;
+padding:10px 20px;
+background:red;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Course Notes</h1>
+
+<div class="container">
+
+<div class="sidebar">
+
+<button onclick="loadPDF('images/notes/basic computer.pdf')">
+📄 Basic Computer Skills
+</button>
+
+<button onclick="loadPDF('images/notes/Computer Fundamentals.pdf')">
+📄 Computer Fundamentals
+</button>
+
+<button onclick="loadPDF('pdf/tally.pdf')">
+📄 Operating System
+</button>
+
+<button onclick="loadPDF('pdf/typing.pdf')">
+📄 MS Word
+</button>
+
+<button onclick="loadPDF('pdf/typing.pdf')">
+📄 MS Excel
+</button>
+
+<button onclick="loadPDF('pdf/typing.pdf')">
+📄 MS PowerPoint
+</button>
+
+<button onclick="loadPDF('pdf/typing.pdf')">
+📄 Internet & Email
+</button>
+
+<button onclick="loadPDF('pdf/typing.pdf')">
+📄 HTML Basics
+</button>
+
+<button onclick="loadPDF('pdf/typing.pdf')">
+📄 Tally/Accounting
+</button>
+
+<button onclick="loadPDF('pdf/typing.pdf')">
+📄 Computer Networking
+</button>
+
+</div>
+
+<div class="viewer">
+
+<iframe id="pdfViewer" src="" width="100%" height="500"></iframe>
+
+<br>
+
+<a id="downloadLink" href="" download>
+<button class="download">Download PDF</button>
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+function loadPDF(file){
+
+document.getElementById("pdfViewer").src = file;
+
+document.getElementById("downloadLink").href = file;
+
+}
+
+</script>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+
+<footer style="background:#1e1e1e;color:white;padding:40px;font-family:Arial;">
+
+<div style="text-align:center;border:1px solid gray;padding:15px;margin-bottom:20px;">
+<font size="6" face="Arial black">Learn With Istiyak</font>
+</div>
+
+<div style="text-align:center;border:1px solid gray;padding:15px;margin-bottom:30px;">
+<h3>Follow Us</h3>
+<a href="https://www.facebook.com/share/1KA4x5AkCN/" target="_blank" style="color:black;margin:10px;"><button>Facebook</a></button>
+<a href="https://youtube.com/@istiyak7techz?si=9fHm0SpjtRlPgKcd" target="_blank" style="color:black;margin:10px;"><button>YouTube</a></button>
+<a href="https://www.instagram.com/mr_istiyak_boy?igsh=OXNhdjNpOXVmOWJw" target="_blank" style="color:black;margin:10px;"><button>Instagram</a></button>
+</div>
+
+<div style="display:flex;justify-content:space-around;flex-wrap:wrap;">
+<div>
+
+<h3>Useful Links</h3>
+<p><a href="Aboutus.html" style="color:white;">About Us</a></p>
+<p><a href="Notespdf.html" style="color:white;">Notes PDF</a></p>
+<p><a href="Video.html" style="color:white;">Courses Video</a></p>
+</div>
+<div>
+
+<h3>Important Links</h3>
+<p><a href="privacypolicy.html" style="color:white;">Privacy Policy</a></p>
+<p><a href="Disclaimer.html" style="color:white;">Disclaimer</a></p>
+<p><a href="Contectus.html" style="color:white;">Contect Us</a></p>
+
+</div>
+</div>
+
+<hr style="margin-top:30px;">
+
+<center>
+<p>© 2026 Learn with Istiyak| Free Computer Course</p>
+</center>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Contact Us</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f2f2f2;
+}
+
+.header{
+background:#0a4fa3;
+color:white;
+text-align:center;
+padding:20px;
+font-size:30px;
+animation:slide 1s;
+}
+
+@keyframes slide{
+from{transform:translateY(-50px);opacity:0;}
+to{transform:translateY(0);opacity:1;}
+}
+
+.container{
+width:90%;
+max-width:1100px;
+margin:40px auto;
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.info,.form{
+flex:1;
+background:white;
+padding:25px;
+box-shadow:0 0 10px gray;
+border-radius:8px;
+}
+
+.info h2,.form h2{
+margin-bottom:20px;
+}
+
+.info p{
+font-size:18px;
+margin:10px 0;
+}
+
+.social a{
+margin-right:15px;
+font-size:22px;
+text-decoration:none;
+}
+
+input,textarea{
+width:100%;
+padding:10px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+background:#0a4fa3;
+color:white;
+padding:10px 20px;
+border:none;
+font-size:16px;
+cursor:pointer;
+border-radius:5px;
+}
+
+button:hover{
+background:#08357a;
+}
+
+/* WhatsApp button */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:25px;
+text-decoration:none;
+}
+
+.map{
+width:100%;
+margin-top:20px;
+}
+
+iframe{
+width:100%;
+height:250px;
+border:0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+Contact Us
+</div>
+
+<div class="container">
+
+<div class="info">
+
+<h2>Contact Information</h2>
+
+<p><b>Name:</b> Istiyak Ansari</p>
+
+<p><b>Email:</b> istiyakansari3110@gmail.com</p>
+
+<p><b>Mobile:</b> +91 9546703110</p>
+
+<div class="social">
+
+<a href="https://youtube.com/@istiyak7techz" target="_blank">📺 YouTube</a>
+
+<a href="https://www.instagram.com/mr_istiyak_boy" target="_blank">📸 Instagram</a>
+
+</div>
+
+<div class="map">
+
+<iframe src="https://maps.google.com/maps?q=banka&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</div>
+
+</div>
+
+<div class="form">
+
+<h2>Send Message</h2>
+
+<form action="istiyakansari3110@gmail.com" method="post" enctype="text/plain">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<input type="text" name="subject" placeholder="Subject">
+
+<textarea name="message" rows="5" placeholder="Your Message"></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+</div>
+
+<!-- WhatsApp Button -->
+
+<a class="whatsapp" href="https://wa.me/9546703110" target="_blank">
+💬
+</a>
+
+<br><br><br><br><br><br><br><br>
+<footer style="background:#1e1e1e;color:white;padding:40px;font-family:Arial;">
+
+<div style="text-align:center;border:1px solid gray;padding:15px;margin-bottom:20px;">
+<font size="6" face="Arial black">Learn With Istiyak</font>
+</div>
+
+<div style="text-align:center;border:1px solid gray;padding:15px;margin-bottom:30px;">
+<h3>Follow Us</h3>
+<a href="https://www.facebook.com/share/1KA4x5AkCN/" target="_blank" style="color:black;margin:10px;"><button>Facebook</a></button>
+<a href="https://youtube.com/@istiyak7techz?si=9fHm0SpjtRlPgKcd" target="_blank" style="color:black;margin:10px;"><button>YouTube</a></button>
+<a href="https://www.instagram.com/mr_istiyak_boy?igsh=OXNhdjNpOXVmOWJw" target="_blank" style="color:black;margin:10px;"><button>Instagram</a></button>
+</div>
+
+<div style="display:flex;justify-content:space-around;flex-wrap:wrap;">
+<div>
+
+<h3>Useful Links</h3>
+<p><a href="Aboutus.html" style="color:white;">About Us</a></p>
+<p><a href="Notespdf.html" style="color:white;">Notes PDF</a></p>
+<p><a href="Video.html" style="color:white;">Courses Video</a></p>
+</div>
+<div>
+
+<h3>Important Links</h3>
+<p><a href="privacypolicy.html" style="color:white;">Privacy Policy</a></p>
+<p><a href="Disclaimer.html" style="color:white;">Disclaimer</a></p>
+<p><a href="Contectus.html" style="color:white;">Contect Us</a></p>
+
+</div>
+</div>
+
+<hr style="margin-top:30px;">
+
+<center>
+<p>© 2026 Learn with Istiyak| Free Computer Course</p>
+</center>
+
+</footer>
+
+</body>
+</html>
